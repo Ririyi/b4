@@ -79,7 +79,7 @@ if (!empty($errors)) {
 }
 
 // ===== Если ошибок нет, сохраняем значения в cookies на 1 год =====
-setcookie('values', json_encode($values), time() + 604800, "/"); // 1 неделя
+setcookie('values', json_encode($values), time() + 31536000, "/"); // 1 год
 
 // ===== Сохраняем заявку в БД =====
 $stmt = $pdo->prepare("INSERT INTO application 
